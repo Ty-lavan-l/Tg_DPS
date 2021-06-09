@@ -82,7 +82,8 @@ export default function NavTabs() {
                 </Tabs>
             </Paper>
             <TabPanel value={value} index={0}>
-                <DataTable />
+                {/* <DataTable /> */}
+                Data base result goes here
             </TabPanel>
             <TabPanel value={value} index={1}>
                 Messages

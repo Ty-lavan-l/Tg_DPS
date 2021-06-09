@@ -1,99 +1,8 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
-// import { makeStyles } from '@material-ui/core/styles';
-// import Tabs from '@material-ui/core/Tabs';
-// import Tab from '@material-ui/core/Tab';
-// import Typography from '@material-ui/core/Typography';
-// import Box from '@material-ui/core/Box';
-// import Paper from '@material-ui/core/Paper';
-// import DataTable from './DataTable';
-
-// function TabPanel(props) {
-//     const { children, value, index, ...other } = props;
-
-//     return (
-//         <div
-//             role='tabpanel'
-//             hidden={value !== index}
-//             id={`nav-tabpanel-${index}`}
-//             aria-labelledby={`nav-tab-${index}`}
-//             {...other}
-//         >
-//             {value === index && (
-//                 <Box p={3}>
-//                     <Typography>{children}</Typography>
-//                 </Box>
-//             )}
-//         </div>
-//     );
-// }
-
-// TabPanel.propTypes = {
-//     children: PropTypes.node,
-//     index: PropTypes.any.isRequired,
-//     value: PropTypes.any.isRequired
-// };
-
-// function a11yProps(index) {
-//     return {
-//         id: `nav-tab-${index}`,
-//         'aria-controls': `nav-tabpanel-${index}`
-//     };
-// }
-
-// function LinkTab(props) {
-//     return (
-//         <Tab
-//             component='a'
-//             onClick={(event) => {
-//                 event.preventDefault();
-//             }}
-//             {...props}
-//         />
-//     );
-// }
-
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         flexGrow: 1
-//     }
-// }));
-
-// export default function EditorTab() {
-//     const classes = useStyles();
-//     const [value, setValue] = React.useState(0);
-
-//     const handleChange = (event, newValue) => {
-//         setValue(newValue);
-//     };
-
-//     return (
-//         <div className={classes.root}>
-//             <Paper square>
-//                 <Tabs
-//                     value={value}
-//                     onChange={handleChange}
-//                     textColor='primary'
-//                     indicatorColor='none'
-//                     aria-label='nav tabs example'
-//                 >
-//                     <LinkTab label='Sql Script' className='tabs' href='/result' {...a11yProps(0)} />
-//                     <LinkTab label='Data' className='tabs' href='/messages' {...a11yProps(1)} />
-//                 </Tabs>
-//             </Paper>
-//             <TabPanel value={value} index={0}>
-//                 <CodeEditor />
-//             </TabPanel>
-//             <TabPanel value={value} index={1}>
-//                 Data Editor
-//             </TabPanel>
-//         </div>
-//     );
-// }
 import React from 'react';
 import 'antd/dist/antd.css';
 import { Tabs, Button } from 'antd';
 import CodeEditor from './Editor';
+import { DeleteOutlined, SyncOutlined } from '@ant-design/icons';
 
 const { TabPane } = Tabs;
 
@@ -148,9 +57,15 @@ class EditorTab extends React.Component {
     render() {
         return (
             <div>
-                <div style={{ marginBottom: 16 }}>
-                    <Button onClick={this.add}>ADD</Button>
-                </div>
+                <span style={{ marginBottom: 16 }}>
+                    <Button onClick={this.add}>Add</Button>
+                </span>
+                <span style={{ marginBottom: 16, marginLeft: 10 }}>
+                    <Button icon={<SyncOutlined />}>Refresh</Button>
+                </span>
+                <span style={{ marginBottom: 16, marginLeft: 10 }}>
+                    <Button icon={<DeleteOutlined />}> Discard all</Button>
+                </span>
                 <Tabs
                     hideAdd
                     onChange={this.onChange}
