@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Numans");
+
+.login_body {
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: "Numans", sans-serif;
+}
+
+#login_h3 {
+  color: white;
+  padding-top: 29px;
+}
+#login_input {
+  width: 90%;
+}
+#login_input1 {
+  width: 90%;
+}
+#login_button {
+  padding: 6px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+}
+
+.login_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.login_container > div {
+  flex: 1;
+  padding: 0 20px;
+}
+.login_box {
+  background-color: rgba(44, 119, 211, 255);
+  border-radius: 8px;
+}
+.login_card-bod {
+  background-color: rgba(44, 119, 211, 255);
+}
+.login_card {
+  height: 270px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(44, 119, 211, 255);
+  margin-right: 185px;
+}
+
+.social_icon span {
+  font-size: 60px;
+  margin-left: 10px;
+  color: #9b97af;
+}
+
+.social_icon span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.login_card-header h3 {
+  color: white;
+}
+
+.login_h1 {
+  font-size: 40px;
+  line-height: 50px;
+  max-width: 500px;
+  color: rgba(44, 119, 211, 255);
+  text-align: center;
+}
+
+.social_icon {
+  position: absolute;
+  right: 20px;
+  top: -45px;
+}
+
+.input-group-prepend span {
+  width: 50px;
+  background-color: white;
+  color: black;
+  border: 0 !important;
+}
+
+.login_input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}

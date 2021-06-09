@@ -1,0 +1,14 @@
+.quary {
+    min-height: 60vh;
+    overflow: hidden;
+    background-color: white;
+}
+
+.result {
+    height: 40vh;
+    overflow: hidden;
+    background-color: white;
+}
+.tabs {
+    text-decoration: none;
+}
